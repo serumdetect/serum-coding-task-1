@@ -1,7 +1,7 @@
 image: condaforge/mambaforge
 tasks:
   - name: Set up Conda channels and environment
-    before: |
+    init: |
       conda config --add channels bioconda
       conda create -y -n local-env 
       conda activate local-env
