@@ -8,6 +8,6 @@ tasks:
       conda activate local-env
 
       mamba install -y mamba
-      mamba install python=3.9 r ipython
-      # mamba install <additional_packages>
+      mamba install -y python=3.9 r ipython
+      # mamba install -y <additional_packages>
     command: conda activate local-env
