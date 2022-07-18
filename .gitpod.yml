@@ -8,4 +8,6 @@ tasks:
       conda activate local-env
       mamba install -y python=3.9
       mamba install -y r pysam samtools=1.15.1 bedtools pysam
+      echo "conda activate local-env" >> ~/.bashrc
     command: conda activate local-env
+
