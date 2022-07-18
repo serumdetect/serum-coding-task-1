@@ -57,5 +57,5 @@ https://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/.
 
 Everytime a Gitpod workspace is stopped and restarted, the environment is
 built from scratch. To configure package installation steps at workspace
-startup, add lines `conda install pandas` in file .gitpod.yaml in section
-`tasks[1].before`.
+startup, add lines such as `mamba install pandas` in file .gitpod.yaml in
+section `tasks[0].before`.
