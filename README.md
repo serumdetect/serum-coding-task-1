@@ -50,12 +50,9 @@ small sample from a 1KGP individual. An example input BED file is available at
 Feel free to use the provided Gitpod environment for running your code in a
 Linux environment. Files can be downloaded from/uploaded to Gitpod.
 
-The Gitpod environment has been pre-installed with Conda to to allow the
-installation of custom packages, for instance by `conda install pandas`.
-For details, see
-https://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/.
+The Gitpod environment has been pre-installed with the necessary packages
+required to solve the task.
 
-Everytime a Gitpod workspace is stopped and restarted, the environment is
-built from scratch. To configure package installation steps at workspace
-startup, add lines such as `mamba install pandas` in file .gitpod.yaml in
-section `tasks[0].before`.
+If you need to install additional packages, feel free to do so using `mamba
+install <package1> <package2> ...`. Note that package installation needs to be
+manually repeated everytime a workspace is started.

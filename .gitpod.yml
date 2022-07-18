@@ -8,6 +8,5 @@ tasks:
       conda activate local-env
 
       mamba install -y mamba
-      mamba install -y python=3.9 r ipython
-      # mamba install -y <additional_packages>
+      mamba install -y --file conda-requirements.txt
     command: conda activate local-env
