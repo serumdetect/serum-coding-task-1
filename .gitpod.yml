@@ -1,2 +1,6 @@
 image:
   file: .gitpod.Dockerfile
+tasks:
+  - name: Add bioconda channel
+    before: |
+      conda config --add channels bioconda
