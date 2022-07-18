@@ -6,8 +6,8 @@ tasks:
       conda config --add channels conda-forge
       conda create -y -n local-env 
       conda activate local-env
-      mamba install -y python=3.9
-      mamba install -y r pysam samtools=1.15.1 bedtools pysam
+      mamba install -y python=3.9 r
+      mamba install -y -c bioconda samtools=1.15.1 pysam
       echo "conda activate local-env" >> ~/.bashrc
     command: conda activate local-env
 
