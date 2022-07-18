@@ -1,1 +1,10 @@
 image: condaforge/mambaforge
+tasks:
+  - name: Set up Conda channels and environment
+    init: |
+      conda config --add channels bioconda
+      conda config --add channels conda-forge
+      conda create -n local-env 
+      mamba install python=3.9
+      mamba install r pysam samtools=1.15.1
+    command: conda activate local-env
