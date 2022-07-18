@@ -1,12 +1,2 @@
-image: condaforge/mambaforge
-tasks:
-  - name: Set up Conda channels and environment
-    before: |
-      conda config --add channels bioconda
-      conda create -y -n local-env 
-      echo "conda activate local-env" >> ~/.bashrc
-      conda activate local-env
-
-      mamba install -y mamba
-      mamba install -y --file conda-requirements.txt
-    command: conda activate local-env
+image:
+  file: .gitpod.Dockerfile
