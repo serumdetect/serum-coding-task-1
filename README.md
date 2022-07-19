@@ -4,7 +4,8 @@ Write an algorithm that computes the mean read coverage, median read coverage
 and "broadest peak" of a BAM file for a set of input genomic intervals.
 
 A "peak" is a genomic interval from position $a$ to position $b$, composed of
-base pair positions $(a, ..., p, ..., b)$, such that $x_{i-1} \le x_i$ when
+base pair positions $(a, ..., p, ..., b)$ with corresponding coverages
+$x_i, i \in {a, a + 1, ..., p, ..., b}$, such that $x_{i-1} \le x_i$ when
 $i \le p$ and $x_i \ge x_{i + 1}$ when $i \ge p$, where $x_i$ is the coverage of
 position $i$. The broadest peak is the peak that is the longest, i.e. that has
 the greatest distance of $b - a$ above.
