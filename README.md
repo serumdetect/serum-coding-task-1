@@ -1,14 +1,15 @@
 # Serum interview coding task
 
 Write an algorithm that computes the mean read coverage, median read coverage
-and "broadest peak" of a BAM file for a set of input genomic intervals. The
-maximum coverage of the BAM file can be assumed to be capped to 1,000X
+and "broadest peak" of a BAM file for a set of input genomic intervals.
 
-A "peak" is a genomic interval $(x_1, ..., x_p, ..., x_n)$, such that
-$x_{i-1} \le x_i$ when $x_i \le p$ and $x_i \ge x_{i + 1}$ when $x_i \ge p$. The broadest peak is the peak that is the longest, i.e. that has the largest
-possible $n$ above.
+A "peak" is a genomic interval from position $a$ to position $b$, composed of
+base pair positions $(a, ..., p, ..., b)$, such that $x_{i-1} \le x_i$ when
+$i \le p$ and $x_i \ge x_{i + 1}$ when $i \ge p$, where $x_i$ is the coverage of
+position $i$. The broadest peak is the peak that is the longest, i.e. that has
+the greatest distance of $b - a$ above.
 
-Apply the following read and base filters:
+Apply the following read and base filters when computing coverage.
 
 * Only count uniquely mapped, properly paired reads
 * Disregard secondary, supplementary, QC failed or duplicated reads
@@ -32,7 +33,7 @@ The output should look as follows.
 
 ## Evaluation
 
-Below are the criteria for evaluating the submission in the order of importance.
+The submission in evaluated using the below criteria ordered by importance.
 
 1. Correctness of the algorithm
 2. Computational efficiency (note that genomic intervals can be as long as an
@@ -44,7 +45,9 @@ Below are the criteria for evaluating the submission in the order of importance.
 
 An example BAM file is provided at
 `NA12878.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.chr21-22.bam`. This is a
-small sample from a 1KGP individual. An example input BED file is available at
+small sample from a 1KGP individual.
+
+An example input BED file is available at
 `test_input.bed`.
 
 
@@ -53,9 +56,9 @@ small sample from a 1KGP individual. An example input BED file is available at
 Feel free to use the provided Gitpod environment for running your code in a
 Linux environment. Files can be downloaded from/uploaded to Gitpod.
 
-The Gitpod environment has been pre-installed with the necessary packages
-required to solve the task.
+The Gitpod environment has been pre-installed with the necessary software 
+packages required to solve the task.
 
 If you need to install additional packages, feel free to do so using `mamba
 install <package1> <package2> ...`. Note that package installation needs to be
-manually repeated everytime a workspace is started.
+manually repeated everytime a workspace is stopped and restarted.
