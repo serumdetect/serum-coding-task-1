@@ -6,3 +6,4 @@ pysam
 bedtools
 bioconductor-rsamtools
 pandas
+r-languageserver

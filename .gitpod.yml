@@ -7,3 +7,4 @@ tasks:
 vscode:
   extensions:
     - yzhang.markdown-all-in-one
+    - ikuyadeu.r
