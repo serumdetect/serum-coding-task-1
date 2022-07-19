@@ -6,5 +6,4 @@ tasks:
       conda config --add channels bioconda
 vscode:
   extensions:
-    - yzhang.markdown-all-in-one
     - ikuyadeu.r
