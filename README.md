@@ -51,6 +51,12 @@ An example input BED file is available at
 `test_input.bed`.
 
 
+## Submitting the project
+
+Please either submit your code via email to yilong@serumdetect.com or share your
+Gitpod workspace with the code to be submitted.
+
+
 ## Tips
 
 Feel free to use the provided Gitpod environment for running your code in a
