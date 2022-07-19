@@ -62,8 +62,9 @@ Gitpod workspace with the code to be submitted.
 Feel free to use the provided Gitpod environment for running your code in a
 Linux environment. Files can be downloaded from/uploaded to Gitpod.
 
-The Gitpod environment has been pre-installed with the necessary software 
-packages required to solve the task.
+The Gitpod environment has been pre-installed with the necessary software
+packages required to solve the task. See a full list of installed packages at
+file `conda-requirements.txt`.
 
 If you need to install additional packages, feel free to do so using `mamba
 install <package1> <package2> ...`. Note that package installation needs to be
