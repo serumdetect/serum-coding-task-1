@@ -4,3 +4,6 @@ tasks:
   - name: Add bioconda channel
     before: |
       conda config --add channels bioconda
+vscode:
+  extensions:
+    - yzhang.markdown-all-in-one

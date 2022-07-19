@@ -1,17 +1,20 @@
 # Serum interview coding task
 
-Write an algorithm (a function or a command line script) that computes the
-per-base coverage of given genomic intervals.
+Write an algorithm that computes the mean read coverage, median read coverage
+and "broadest peak" of a BAM file for a set of input genomic intervals.
 
-Perform coverage computation with the following constraints.
+A "peak" is a genomic interval $x_1, ..., x_p, ..., x_n$, such that
+$x_{i-1} <= x_i$ when $i <= p$ and $x_i >= x{i + 1}$ when $i >= p$. The broadest
+peak is the peak that is the longest, i.e. that has the largest possible $n$ above.
+
+Apply the following read and base filters:
 
 * Only count uniquely mapped, properly paired reads
 * Disregard secondary, supplementary, QC failed or duplicated reads
 * Only count nucleotides with quality >= 10
 * Deletions with respect to the reference genome should be disregarded
 
-For example, if the input is BAM `input.bam` and a BED file with the following
-contents:
+For example, if the input BED file has the following contents:
 
     22  22488245    22489573
     22  24249603    24249760
@@ -20,12 +23,10 @@ contents:
 
 The output should look as follows.
 
-    22  22488246    <coverage>
-    22  22488247    <coverage>
+    22  22488245    22489573    <mean_coverage> <median_coverage>   <length_of_broadest_peak>
+    22  24249603    24249760    <mean_coverage> <median_coverage>   <length_of_broadest_peak>
+    22  24250034    24250112    <mean_coverage> <median_coverage>   <length_of_broadest_peak>
     ...
-    22  24249604    <coverage>
-    ...
-
 
 ## Evaluation
 
