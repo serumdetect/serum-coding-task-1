@@ -1,11 +1,12 @@
 # Serum interview coding task
 
 Write an algorithm that computes the mean read coverage, median read coverage
-and "broadest peak" of a BAM file for a set of input genomic intervals.
+and "broadest peak" of a BAM file for a set of input genomic intervals. The
+maximum coverage of the BAM file can be assumed to be capped to 1,000X
 
-A "peak" is a genomic interval $x_1, ..., x_p, ..., x_n$, such that
-$x_{i-1} <= x_i$ when $i <= p$ and $x_i >= x{i + 1}$ when $i >= p$. The broadest
-peak is the peak that is the longest, i.e. that has the largest possible $n$ above.
+A "peak" is a genomic interval $(x_1, ..., x_p, ..., x_n)$, such that
+$x_{i-1} \le x_i$ when $x_i \le p$ and $x_i \ge x_{i + 1}$ when $x_i \ge p$. The broadest peak is the peak that is the longest, i.e. that has the largest
+possible $n$ above.
 
 Apply the following read and base filters:
 
@@ -28,13 +29,13 @@ The output should look as follows.
     22  24250034    24250112    <mean_coverage> <median_coverage>   <length_of_broadest_peak>
     ...
 
+
 ## Evaluation
 
 Below are the criteria for evaluating the submission in the order of importance.
 
 1. Correctness of the algorithm
-2. Computational efficiency. The algorithm should be fast whether the input is
-   composed of a few long intervals or many short intervals.
+2. Computational efficiency
 3. Programming style and best practices
 
 
