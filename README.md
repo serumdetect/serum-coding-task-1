@@ -35,8 +35,9 @@ The output should look as follows.
 Below are the criteria for evaluating the submission in the order of importance.
 
 1. Correctness of the algorithm
-2. Computational efficiency
-3. Programming style and best practices
+2. Computational efficiency (note that genomic intervals can be as long as an
+   entire chromosome)
+1. Programming style and best practices
 
 
 ## Example data
