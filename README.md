@@ -68,6 +68,6 @@ The Gitpod environment has been pre-installed with the necessary software
 packages required to solve the task. See a full list of installed packages at
 file `conda-requirements.txt`.
 
-If you need to install additional packages, feel free to do so using `mamba
+If you need to install additional packages, feel free to do so using `conda
 install <package1> <package2> ...`. Note that package installation needs to be
 manually repeated everytime a workspace is stopped and restarted.
