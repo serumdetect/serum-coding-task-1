@@ -10,12 +10,27 @@ $i \le p$ and $x_i \ge x_{i + 1}$ when $i \ge p$, where $x_i$ is the coverage of
 position $i$. The broadest peak is the peak that is the longest, i.e. that has
 the greatest distance of $b - a$ above.
 
+Note that a peak may include positions with zero coverage. For instance, in a region of the following coverage values, the broadest peak is of length 9.
+
+2
+**0
+0
+1
+2
+2
+3
+1
+0
+0**
+1
+
+
 Apply the following read and base filters when computing coverage.
 
 * Only count uniquely mapped, properly paired reads
 * Disregard secondary, supplementary, QC failed or duplicated reads
 * Only count nucleotides with quality >= 10
-* Deletions with respect to the reference genome should be disregarded
+* Deletions in reads with respect to the reference genome (i.e. bases in the reference but missing in a read) should not be counted towards coverage
 
 For example, if the input BED file has the following contents:
 
